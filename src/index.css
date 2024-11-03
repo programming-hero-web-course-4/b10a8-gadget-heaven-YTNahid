@@ -1,18 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
 /* Roots
 ========================================================================== */
 :root {
-  --content-width: 1200px;
+  --content-width: 1140px;
   --gap: 20px;
   --column-padding: 10px;
 
-  --primary-color: #0e7a81;
-  --heading-color: #131313;
-  --text-color: #131313;
-  --bg-color: #131313;
-  --border-color: rgba(14, 122, 129, 0.15);
+  --primary-color: #9538e2;
+  --heading-color: #0b0b0b;
+  --text-color: rgb(9, 8, 15, 0.6);
+  --border-color: rgb(9, 8, 15, 0.1);
+  --bg-color: #f7f7f7;
   --accent-color: #e7fe29;
 
-  --primary-font: 'Lato', sans-serif;
+  --primary-font: 'Sora', sans-serif;
 }
 
 /* Global CSS Style
@@ -27,6 +29,7 @@
 body {
   margin: 0;
   overflow-x: hidden;
+  background-color: var(--bg-color);
 }
 
 /*
@@ -66,29 +69,29 @@ body {
   color: var(--heading-color);
   line-height: 1.2em;
   margin: 0;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 h1.heading {
-  font-size: clamp(40px, calc((72 - 40) * ((100vw - 360px) / (1200 - 360)) + 40px), 72px);
+  font-size: clamp(40px, calc((72 - 40) * ((100vw - 360px) / (1140 - 360)) + 40px), 72px);
 }
 
 h2.heading {
-  font-size: clamp(27px, calc((40 - 27) * ((100vw - 360px) / (1200 - 360)) + 27px), 40px);
+  font-size: clamp(27px, calc((40 - 27) * ((100vw - 360px) / (1140 - 360)) + 27px), 40px);
 }
 
 h3.heading {
-  font-size: clamp(20px, calc((24 - 20) * ((100vw - 360px) / (1200 - 360)) + 20px), 24px);
+  font-size: clamp(20px, calc((24 - 20) * ((100vw - 360px) / (1140 - 360)) + 20px), 24px);
   line-height: 1.5em;
 }
 
 h4.heading {
-  font-size: clamp(17px, calc((20 - 17) * ((100vw - 360px) / (1200 - 360)) + 17px), 20px);
+  font-size: clamp(17px, calc((20 - 17) * ((100vw - 360px) / (1140 - 360)) + 17px), 20px);
   line-height: 1.5em;
 }
 
 h5.heading {
-  font-size: clamp(16px, calc((18 - 16) * ((100vw - 360px) / (1200 - 360)) + 16px), 18px);
+  font-size: clamp(16px, calc((18 - 16) * ((100vw - 360px) / (1140 - 360)) + 16px), 18px);
   line-height: 1.5em;
 }
 
@@ -137,19 +140,15 @@ ul {
   .row > div.column {
     width: 100%;
   }
-
-  /* Text Style */
-  h1.heading {
-    font-size: 36px;
-  }
-
-  h2.heading {
-    font-size: 32px;
-  }
 }
-/* eslint-disable-next-line */
+
+/* Custom CSS Style
+========================================================================== */
+/* --- Footer --- */
+.footer-nav a:hover {
+  color: var(--primary-color);
+}
+
 @tailwind base;
-/* eslint-disable-next-line */
 @tailwind components;
-/* eslint-disable-next-line */
 @tailwind utilities;

@@ -1,0 +1,205 @@
+[
+  {
+    "product_id": 1,
+    "product_title": "Gaming Laptop Pro",
+    "product_image": "https://example.com/images/gaming-laptop-pro.jpg",
+    "category": "Laptops",
+    "price": 1050.99,
+    "description": "High-performance gaming laptop with advanced graphics.",
+    "specification": ["Intel i7", "16GB RAM", "512GB SSD", "NVIDIA RTX 3060"],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": 2,
+    "product_title": "Business Ultrabook",
+    "product_image": "https://example.com/images/business-ultrabook.jpg",
+    "category": "Laptops",
+    "price": 750.5,
+    "description": "Lightweight and powerful ultrabook ideal for professionals.",
+    "specification": ["Intel i5", "8GB RAM", "256GB SSD", "13-inch display"],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": 3,
+    "product_title": "Student Laptop Basic",
+    "product_image": "https://example.com/images/student-laptop.jpg",
+    "category": "Laptops",
+    "price": 499.99,
+    "description": "Affordable laptop for students with essential features.",
+    "specification": ["Intel i3", "4GB RAM", "128GB SSD"],
+    "availability": true,
+    "rating": 4.3
+  },
+  {
+    "product_id": 4,
+    "product_title": "Creative Design Laptop",
+    "product_image": "https://example.com/images/design-laptop.jpg",
+    "category": "Laptops",
+    "price": 1350.75,
+    "description": "Laptop optimized for graphic design and creative projects.",
+    "specification": ["AMD Ryzen 7", "16GB RAM", "1TB SSD", "NVIDIA GTX 1650"],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": 5,
+    "product_title": "Convertible Touchscreen Laptop",
+    "product_image": "https://example.com/images/convertible-touch-laptop.jpg",
+    "category": "Laptops",
+    "price": 899.5,
+    "description": "2-in-1 laptop with a touchscreen and a 360-degree hinge.",
+    "specification": ["Intel i5", "8GB RAM", "256GB SSD"],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": 6,
+    "product_title": "Budget Everyday Laptop",
+    "product_image": "https://example.com/images/budget-everyday-laptop.jpg",
+    "category": "Laptops",
+    "price": 550.25,
+    "description": "Affordable laptop suitable for everyday tasks.",
+    "specification": ["Intel i3", "8GB RAM", "128GB SSD"],
+    "availability": true,
+    "rating": 4.2
+  },
+
+  {
+    "product_id": 7,
+    "product_title": "Android Power",
+    "product_image": "https://example.com/images/android-power.jpg",
+    "category": "Phones",
+    "price": 599.99,
+    "description": "High-performance Android phone with excellent battery life.",
+    "specification": ["Snapdragon 870", "8GB RAM", "128GB Storage", "48MP Camera"],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": 8,
+    "product_title": "Compact Smartphone",
+    "product_image": "https://example.com/images/compact-smartphone.jpg",
+    "category": "Phones",
+    "price": 650.99,
+    "description": "Compact smartphone with powerful specs.",
+    "specification": ["Snapdragon 765", "6GB RAM", "128GB Storage", "12MP Camera"],
+    "availability": true,
+    "rating": 4.5
+  },
+
+  {
+    "product_id": 9,
+    "product_title": "Wireless Earbuds",
+    "product_image": "https://example.com/images/wireless-earbuds.jpg",
+    "category": "Accessories",
+    "price": 75.5,
+    "description": "High-quality wireless earbuds with noise cancellation.",
+    "specification": ["Bluetooth 5.0", "12-hour battery", "Noise canceling"],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": 10,
+    "product_title": "Portable Charger",
+    "product_image": "https://example.com/images/portable-charger.jpg",
+    "category": "Accessories",
+    "price": 54.99,
+    "description": "Portable charger for charging on the go.",
+    "specification": ["10000mAh", "USB-C & USB-A ports"],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": 11,
+    "product_title": "Phone Case",
+    "product_image": "https://example.com/images/phone-case.jpg",
+    "category": "Accessories",
+    "price": 52.25,
+    "description": "Shockproof phone case.",
+    "specification": ["Anti-scratch", "Durable"],
+    "availability": true,
+    "rating": 4.3
+  },
+
+  {
+    "product_id": 12,
+    "product_title": "Fitness Smart Watch",
+    "product_image": "https://example.com/images/fitness-smart-watch.jpg",
+    "category": "Smart Watches",
+    "price": 150.99,
+    "description": "Smart watch with health and fitness tracking.",
+    "specification": ["Heart rate monitor", "GPS", "Sleep tracking"],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": 13,
+    "product_title": "Basic Smart Watch",
+    "product_image": "https://example.com/images/basic-smart-watch.jpg",
+    "category": "Smart Watches",
+    "price": 99.99,
+    "description": "Affordable smart watch with essential features.",
+    "specification": ["Step tracker", "Bluetooth"],
+    "availability": true,
+    "rating": 4.3
+  },
+
+  {
+    "product_id": 14,
+    "product_title": "MacBook Pro 14-inch",
+    "product_image": "https://example.com/images/macbook-pro-14.jpg",
+    "category": "MacBook",
+    "price": 1999.99,
+    "description": "Powerful laptop with M1 chip for professional use.",
+    "specification": ["Apple M1 Pro", "16GB RAM", "512GB SSD"],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": 15,
+    "product_title": "MacBook Air 13-inch",
+    "product_image": "https://example.com/images/macbook-air-13.jpg",
+    "category": "MacBook",
+    "price": 1249.99,
+    "description": "Lightweight laptop with long battery life.",
+    "specification": ["Apple M1", "8GB RAM", "256GB SSD"],
+    "availability": true,
+    "rating": 4.7
+  },
+
+  {
+    "product_id": 16,
+    "product_title": "iPhone 13 Pro",
+    "product_image": "https://example.com/images/iphone-13-pro.jpg",
+    "category": "iPhone",
+    "price": 999.99,
+    "description": "High-end iPhone with excellent camera quality.",
+    "specification": ["A15 Bionic", "128GB Storage", "6.1-inch display"],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": 17,
+    "product_title": "iPhone 12",
+    "product_image": "https://example.com/images/iphone-12.jpg",
+    "category": "iPhone",
+    "price": 799.99,
+    "description": "Previous generation iPhone with powerful performance.",
+    "specification": ["A14 Bionic", "64GB Storage", "6.1-inch display"],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": 18,
+    "product_title": "iPhone SE",
+    "product_image": "https://example.com/images/iphone-se.jpg",
+    "category": "iPhone",
+    "price": 429.99,
+    "description": "Compact and affordable iPhone model.",
+    "specification": ["A13 Bionic", "64GB Storage", "4.7-inch display"],
+    "availability": true,
+    "rating": 4.4
+  }
+]

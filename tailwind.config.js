@@ -4,11 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary-color': '#0E7A81',
-        'heading-color': '#131313',
-        'text-color': '#131313',
-        'border-color': 'rgb(19, 19, 19, 0.1);',
-        'bg-color': '#131313',
+        'primary-color': '#9538E2',
+        'heading-color': '#0B0B0B',
+        'text-color': 'rgb(9, 8, 15, .6)',
+        'border-color': 'rgb(9, 8, 15, .1)',
+        'bg-color': '##f7f7f7',
         'accent-color': '#E7FE29',
       },
       fontFamily: {
