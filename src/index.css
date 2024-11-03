@@ -1,0 +1,155 @@
+/* Roots
+========================================================================== */
+:root {
+  --content-width: 1200px;
+  --gap: 20px;
+  --column-padding: 10px;
+
+  --primary-color: #0e7a81;
+  --heading-color: #131313;
+  --text-color: #131313;
+  --bg-color: #131313;
+  --border-color: rgba(14, 122, 129, 0.15);
+  --accent-color: #e7fe29;
+
+  --primary-font: 'Lato', sans-serif;
+}
+
+/* Global CSS Style
+========================================================================== */
+* {
+  transition: all 0.2s;
+  font-family: var(--primary-font);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/*
+* Sections and columns Structure ---------
+*/
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap);
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: var(--content-width);
+}
+.row-full {
+  max-width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--content-width);
+  gap: var(--gap);
+  padding: var(--column-padding);
+}
+
+/*
+* Text Styles ---------
+*/
+.heading {
+  color: var(--heading-color);
+  line-height: 1.2em;
+  margin: 0;
+  font-weight: 900;
+}
+
+h1.heading {
+  font-size: clamp(40px, calc((72 - 40) * ((100vw - 360px) / (1200 - 360)) + 40px), 72px);
+}
+
+h2.heading {
+  font-size: clamp(27px, calc((40 - 27) * ((100vw - 360px) / (1200 - 360)) + 27px), 40px);
+}
+
+h3.heading {
+  font-size: clamp(20px, calc((24 - 20) * ((100vw - 360px) / (1200 - 360)) + 20px), 24px);
+  line-height: 1.5em;
+}
+
+h4.heading {
+  font-size: clamp(17px, calc((20 - 17) * ((100vw - 360px) / (1200 - 360)) + 17px), 20px);
+  line-height: 1.5em;
+}
+
+h5.heading {
+  font-size: clamp(16px, calc((18 - 16) * ((100vw - 360px) / (1200 - 360)) + 16px), 18px);
+  line-height: 1.5em;
+}
+
+.text {
+  color: var(--text-color);
+  font-size: clamp(14px, calc((16 - 14) * ((100vw - 360px) / (1200 - 360)) + 14px), 16px);
+  line-height: 1.6em;
+  margin: 0;
+}
+.text-gap {
+  margin-bottom: 15px;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+}
+
+/* Buttons */
+.button {
+  background: var(--primary-color);
+  color: white;
+  font-size: clamp(17px, calc((20 - 17) * ((100vw - 360px) / (1200 - 360)) + 17px), 20px);
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 14px 32px;
+  cursor: pointer;
+}
+.button:hover {
+  transform: scale(1.02);
+}
+
+@media only screen and (max-width: 576px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .row > div.column {
+    width: 100%;
+  }
+
+  /* Text Style */
+  h1.heading {
+    font-size: 36px;
+  }
+
+  h2.heading {
+    font-size: 32px;
+  }
+}
+/* eslint-disable-next-line */
+@tailwind base;
+/* eslint-disable-next-line */
+@tailwind components;
+/* eslint-disable-next-line */
+@tailwind utilities;
