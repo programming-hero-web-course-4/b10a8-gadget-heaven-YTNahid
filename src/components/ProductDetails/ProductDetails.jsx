@@ -1,10 +1,13 @@
 import { useLoaderData, useLocation } from 'react-router-dom';
 import ReactStars from 'react-rating-stars-component';
 import { CiShoppingCart, CiHeart } from 'react-icons/ci';
-import { useEffect } from 'react';
-import { addToCartStorage } from './cartStorage';
+import { useContext, useEffect } from 'react';
+import { addToCartStorage, addToWishlistStorage } from './cartStorage';
+import { AppContext } from '../Context/AppProvider';
 
 const ProductDetails = () => {
+  const { cart, setCart, wishlist, setWishlist } = useContext(AppContext);
+
   const location = useLocation();
 
   const id = parseInt(location.pathname.split('/')[2]);
@@ -20,6 +23,12 @@ const ProductDetails = () => {
 
   const handleCart = (id) => {
     addToCartStorage(id);
+    setCart([...cart, id]);
+  };
+
+  const handleWishlist = (id) => {
+    addToWishlistStorage(id);
+    setWishlist([...wishlist, id]);
   };
 
   return (
@@ -81,7 +90,10 @@ const ProductDetails = () => {
             >
               Add To Cart <CiShoppingCart className="text-3xl" />
             </button>
-            <button className="flex items-center justify-center w-12 h-12 rounded-full border border-border-color hover:bg-primary-color hover:text-white">
+            <button
+              className="flex items-center justify-center w-12 h-12 rounded-full border border-border-color hover:bg-primary-color hover:text-white"
+              onClick={() => handleWishlist(product_id)}
+            >
               <CiHeart className="text-3xl"></CiHeart>
             </button>
           </div>

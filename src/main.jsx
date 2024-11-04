@@ -9,6 +9,7 @@ import ProductDetails from './components/ProductDetails/ProductDetails';
 import Dashboard from './components/Dashboard/Dashboard';
 import Contact from './components/Contact/Contact';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const productsLoader = async () => {
   const response = await fetch('/products.json');
