@@ -8,7 +8,7 @@ export default {
         'heading-color': '#0B0B0B',
         'text-color': 'rgb(9, 8, 15, .6)',
         'border-color': 'rgb(9, 8, 15, .1)',
-        'bg-color': '##f7f7f7',
+        'bg-color': '#f7f7f7',
         'accent-color': '#E7FE29',
       },
       fontFamily: {

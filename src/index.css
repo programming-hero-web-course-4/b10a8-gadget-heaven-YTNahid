@@ -67,17 +67,17 @@ body {
 */
 .heading {
   color: var(--heading-color);
-  line-height: 1.2em;
+  line-height: 1.4em;
   margin: 0;
   font-weight: 700;
 }
 
 h1.heading {
-  font-size: clamp(40px, calc((72 - 40) * ((100vw - 360px) / (1140 - 360)) + 40px), 72px);
+  font-size: clamp(30px, calc((45 - 30) * ((100vw - 360px) / (1140 - 360)) + 30px), 45px);
 }
 
 h2.heading {
-  font-size: clamp(27px, calc((40 - 27) * ((100vw - 360px) / (1140 - 360)) + 27px), 40px);
+  font-size: clamp(25px, calc((35 - 25) * ((100vw - 360px) / (1140 - 360)) + 25px), 35px);
 }
 
 h3.heading {
@@ -144,6 +144,30 @@ ul {
 
 /* Custom CSS Style
 ========================================================================== */
+/* --- Header --- */
+.home .header-menu {
+  color: white;
+}
+
+.header-menu a:hover,
+.header-menu a.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* --- Home --- */
+.tablinks {
+  border-radius: 200px;
+  padding: 16px 40px;
+  background-color: var(--bg-color);
+  font-weight: bold;
+}
+
+.tablinks.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
 /* --- Footer --- */
 .footer-nav a:hover {
   color: var(--primary-color);
