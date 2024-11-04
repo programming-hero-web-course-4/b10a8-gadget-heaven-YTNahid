@@ -7,13 +7,18 @@ export const AppContext = createContext();
 const AppProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [wishlist, setWishlist] = useState([]);
+  const [dashboardTab, setDashboardTab] = useState('cart');
+
+  const handleDashboardTab = (tab) => {
+    setDashboardTab(tab);
+  };
 
   useEffect(() => {
     setCart(getCartlist());
     setWishlist(getWishlist());
   }, []);
 
-  return <AppContext.Provider value={{ cart, setCart, wishlist, setWishlist }}>{children}</AppContext.Provider>;
+  return <AppContext.Provider value={{ cart, setCart, wishlist, setWishlist, dashboardTab, handleDashboardTab }}>{children}</AppContext.Provider>;
 };
 
 AppProvider.propTypes = {
