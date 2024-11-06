@@ -12,15 +12,15 @@ const Products = () => {
   };
 
   return (
-    <div className="section">
+    <div className="section py-[45px] lg:py-[70px]">
       <div className="row">
         <div className="column">
-          <h2 className="heading">Explore Cutting-Edge Gadgets</h2>
+          <h2 className="heading text-center">Explore Cutting-Edge Gadgets</h2>
         </div>
       </div>
-      <div className="row max-w-[1340px] items-start">
-        <div className="column w-1/5 bg-white border border-border-color rounded-xl">
-          <div className="tab flex flex-col gap-5 p-5">
+      <div className="row max-w-[1340px] items-start flex-col lg:flex-row">
+        <div className="column mb-5 lg:mb-0 lg:w-1/5 bg-white border border-border-color rounded-xl">
+          <div className="tab flex flex-col md:flex-row lg:flex-col gap-5 p-5">
             <button className={`tablinks ${productTab === 'All' ? 'active' : ''}`} onClick={() => handleTab('All')}>
               All Products
             </button>
@@ -35,7 +35,7 @@ const Products = () => {
             </button>
           </div>
         </div>
-        <div className="column pt-0 w-4/5 grid grid-cols-3">
+        <div className="column pt-0  lg:w-4/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => {
             if (productTab === product.category) return <Product key={product.product_id} product={product}></Product>;
             else if (productTab === 'All') return <Product key={product.product_id} product={product}></Product>;
