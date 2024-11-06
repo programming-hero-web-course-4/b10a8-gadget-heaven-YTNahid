@@ -23,7 +23,7 @@ const ProductDetails = () => {
   return (
     <section className="section">
       <div className="row bg-white border border-border-color rounded-3xl p-1 overflow-hidden max-w-[1540px]">
-        <div className="column items-center bg-primary-color rounded-3xl max-w-[1540px] lg:pt-6 lg:pb-[260px]">
+        <div className="column items-center bg-primary-color rounded-3xl max-w-[1540px] py-6 lg:pt-6 lg:pb-[260px]">
           <h2 className="heading text-center max-w-[850px] text-white">Product Details</h2>
           <p className="text text-white max-w-[600px] text-center">
             Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it
@@ -31,13 +31,13 @@ const ProductDetails = () => {
           </p>
         </div>
       </div>
-      <div className="row mt-[-230px] bg-white rounded-3xl p-5">
-        <div className="column w-1/3">
+      <div className="row lg:mt-[-230px] bg-white rounded-3xl p-5">
+        <div className="column lg:w-1/3">
           <div className="bg-bg-color flex justify-center items-center p-6 rounded-xl">
-            <img src={product_image} alt={product_title} className="object-contain" />
+            <img src={product_image} alt={product_title} className="object-contain w-full" />
           </div>
         </div>
-        <div className="column w-2/3 gap-4">
+        <div className="column lg:w-2/3 gap-4">
           <small className="text-text-color">{category}</small>
           <h3 className="heading">{product_title}</h3>
           <h6 className="heading text-text-color">Price: {price}$</h6>

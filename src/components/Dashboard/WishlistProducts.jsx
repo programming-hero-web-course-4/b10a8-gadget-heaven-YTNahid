@@ -17,10 +17,10 @@ const WishlistProducts = ({ wishlistProducts }) => {
       {!wishlistProducts.length ? <p>Your wishlist is empty. Please add some products</p> : ''}
       {wishlistProducts.map((product) => (
         <div className="row relative items-center gap-5 rounded-xl border border-border-color bg-white p-4" key={product.product_id}>
-          <div className="column w-[15%]">
+          <div className="column md:w-[25%] lg:w-[15%]">
             <img src={product.product_image} alt="Product" className="w-full" />
           </div>
-          <div className="column w[85%] gap-3">
+          <div className="column md:w-[75%] lg:w-[85%] gap-3">
             <h4 className="heading">{product.product_title}</h4>
             <p className="text">{product.description}</p>
             <p className="text text-black">Price: ${product.price}$</p>

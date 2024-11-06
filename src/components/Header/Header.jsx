@@ -43,10 +43,10 @@ const Header = () => {
         <div className="column w-[15%] order-3 items-end lg:order-2 lg:w-1/3">
           <CiMenuFries className={`${isHome ? 'text-white' : 'text-black'} text-2xl lg:hidden`} onClick={() => handleMenuToggle()}></CiMenuFries>
           <ul
-            className={`header-menu flex flex-col ${isHome ? 'bg-white' : 'bg-primary-color'} pl-5 py-3 ${
+            className={`header-menu shadow lg:shadow-none flex flex-col ${isHome ? 'bg-white' : 'bg-primary-color'} pl-5 py-3 ${
               isHome ? '!text-black' : '!text-white'
             } self-center gap-4  w-full lg:gap-10 scale-0 absolute left-0 top-[80px] ${menuToggle ? 'scale-100' : ''} lg:flex ${
-              isHome ? 'lg:!text-white' : ''
+              isHome ? 'lg:!text-white' : 'lg:!text-black'
             } lg:scale-100 lg:static lg:bg-transparent lg:flex-row`}
           >
             {navLinks}

@@ -42,11 +42,11 @@ const CartProducts = ({ cartProducts, setCartProducts, totalPrice }) => {
 
   return (
     <>
-      <div className="row">
+      <div className="row items-center">
         <div className="column w-[15%]">
           <h3 className="heading">Cart</h3>
         </div>
-        <div className="column w-[85%] flex-row items-center justify-end">
+        <div className="column w-[85%] md:flex-row items-center justify-end">
           <h4 className="heading">Total Price: {totalPrice}$</h4>
           <button
             className="flex items-center gap-3 px-6 py-3 border border-primary-color  rounded-full bg-primary-color font-bold text-white hover:bg-transparent hover:text-primary-color"
@@ -66,10 +66,10 @@ const CartProducts = ({ cartProducts, setCartProducts, totalPrice }) => {
       <div className="column">
         {cartProducts.map((product, idx) => (
           <div className="row relative items-center gap-5 rounded-xl border border-border-color bg-white p-4" key={idx}>
-            <div className="column w-[15%]">
+            <div className="column md:w-[25%] lg:w-[15%]">
               <img src={product.product_image} alt="Product" className="w-full" />
             </div>
-            <div className="column w-[85%] gap-3">
+            <div className="column md:w-[75%] lg:w-[85%] gap-3">
               <h4 className="heading">{product.product_title}</h4>
               <p className="text">{product.description}</p>
               <p className="text text-black">Price: ${product.price}$</p>
