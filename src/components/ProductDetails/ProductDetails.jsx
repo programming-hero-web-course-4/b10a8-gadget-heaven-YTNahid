@@ -2,11 +2,10 @@ import { useLoaderData, useLocation } from 'react-router-dom';
 import ReactStars from 'react-rating-stars-component';
 import { CiShoppingCart, CiHeart } from 'react-icons/ci';
 import { useContext, useEffect } from 'react';
-import { addToCartStorage, addToWishlistStorage } from './cartStorage';
-import { AppContext } from '../Context/AppProvider';
+import { AppContext } from '../Context/AppContext';
 
 const ProductDetails = () => {
-  const { cart, setCart, wishlist, setWishlist } = useContext(AppContext);
+  const { addToCart, addToWishlist } = useContext(AppContext);
 
   const location = useLocation();
 
@@ -19,17 +18,7 @@ const ProductDetails = () => {
 
   useEffect(() => {
     document.title = `${product_title}`;
-  }, []);
-
-  const handleCart = (id) => {
-    addToCartStorage(id);
-    setCart([...cart, id]);
-  };
-
-  const handleWishlist = (id) => {
-    addToWishlistStorage(id);
-    setWishlist([...wishlist, id]);
-  };
+  }, [product_title]);
 
   return (
     <section className="section">
@@ -86,13 +75,13 @@ const ProductDetails = () => {
           <div className="flex items-center gap-5">
             <button
               className="flex items-center gap-3 px-6 py-3 border border-primary-color  rounded-full bg-primary-color font-bold text-white hover:bg-transparent hover:text-primary-color"
-              onClick={() => handleCart(product_id)}
+              onClick={() => addToCart(product_id)}
             >
-              Add To Cart <CiShoppingCart className="text-3xl" />
+              Add To Cart <CiShoppingCart className="text-xl" />
             </button>
             <button
               className="flex items-center justify-center w-12 h-12 rounded-full border border-border-color hover:bg-primary-color hover:text-white"
-              onClick={() => handleWishlist(product_id)}
+              onClick={() => addToWishlist(product_id)}
             >
               <CiHeart className="text-3xl"></CiHeart>
             </button>

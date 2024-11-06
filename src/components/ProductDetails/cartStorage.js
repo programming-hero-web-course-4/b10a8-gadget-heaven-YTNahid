@@ -27,19 +27,15 @@ const removeFromWishlistStorage = (id) => {
   const updatedWishlist = storedWishlist.filter((item) => item !== id);
 
   localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
-  toast.success('Product removed from Wishlist');
+  toast.warn('Product removed from Wishlist');
 };
 
 const addToCartStorage = (id) => {
   const storedCartlist = getCartlist();
 
-  if (storedCartlist.includes(id)) {
-    toast.error('Already added to Cart');
-  } else {
-    storedCartlist.push(id);
-    localStorage.setItem('cart', JSON.stringify(storedCartlist));
-    toast.success('Product is added to Cart');
-  }
+  storedCartlist.push(id);
+  localStorage.setItem('cart', JSON.stringify(storedCartlist));
+  toast.success('Product is added to Cart');
 };
 
 const removeFromCartStorage = (id) => {
@@ -47,7 +43,7 @@ const removeFromCartStorage = (id) => {
   const updatedCartlist = storedCartlist.filter((item) => item !== id);
 
   localStorage.setItem('cart', JSON.stringify(updatedCartlist));
-  toast.success('Product removed from Cart');
+  toast.warn('Product removed from Cart');
 };
 
 export { getCartlist, getWishlist, addToCartStorage, addToWishlistStorage, removeFromCartStorage, removeFromWishlistStorage };

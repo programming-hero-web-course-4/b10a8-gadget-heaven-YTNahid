@@ -1,8 +1,7 @@
-import { createContext, useState, useEffect } from 'react';
-import { getCartlist, getWishlist } from '../ProductDetails/cartStorage';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
-
-export const AppContext = createContext();
+import { toast } from 'react-toastify';
+import { AppContext } from './AppContext';
 
 const AppProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
@@ -13,12 +12,51 @@ const AppProvider = ({ children }) => {
     setDashboardTab(tab);
   };
 
-  useEffect(() => {
-    setCart(getCartlist());
-    setWishlist(getWishlist());
-  }, []);
+  const addToCart = (id) => {
+    setCart([...cart, id]);
+    toast.success('Product added to cart');
+  };
 
-  return <AppContext.Provider value={{ cart, setCart, wishlist, setWishlist, dashboardTab, handleDashboardTab }}>{children}</AppContext.Provider>;
+  const addToWishlist = (id) => {
+    if (!wishlist.includes(id)) {
+      setWishlist([...wishlist, id]);
+      toast.success('Product added to wishlist');
+    } else {
+      toast.error('Already added to wishlist');
+    }
+  };
+
+  const handleRemoveFromCart = (id) => {
+    const index = cart.indexOf(id);
+    if (index !== -1) {
+      const newCart = [...cart];
+      newCart.splice(index, 1);
+      setCart(newCart);
+    }
+  };
+
+  const handleRemoveFromWishlist = (id) => {
+    const newWishlist = wishlist.filter((item) => item !== id);
+    setWishlist(newWishlist);
+  };
+
+  return (
+    <AppContext.Provider
+      value={{
+        cart,
+        setCart,
+        addToCart,
+        wishlist,
+        addToWishlist,
+        dashboardTab,
+        handleDashboardTab,
+        handleRemoveFromCart,
+        handleRemoveFromWishlist,
+      }}
+    >
+      {children}
+    </AppContext.Provider>
+  );
 };
 
 AppProvider.propTypes = {

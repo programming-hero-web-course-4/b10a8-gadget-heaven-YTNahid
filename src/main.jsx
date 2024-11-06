@@ -10,6 +10,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Contact from './components/Contact/Contact';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Statistics from './components/Statistics/Statistics';
 
 const productsLoader = async () => {
   const response = await fetch('/products.json');
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
         path: '/contact',
         element: <Contact></Contact>,
       },
+      {
+        path: '/statistics',
+        element: <Statistics></Statistics>,
+      },
     ],
   },
 ]);
@@ -49,6 +54,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
-    <ToastContainer></ToastContainer>
+    <ToastContainer position="top-center"></ToastContainer>
   </StrictMode>
 );

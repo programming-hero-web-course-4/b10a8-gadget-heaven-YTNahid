@@ -1,7 +1,7 @@
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { CiShoppingCart, CiHeart } from 'react-icons/ci';
 import { useContext } from 'react';
-import { AppContext } from '../Context/AppProvider';
+import { AppContext } from '../Context/AppContext';
 
 const Header = () => {
   const { cart, wishlist, handleDashboardTab } = useContext(AppContext);
@@ -42,9 +42,9 @@ const Header = () => {
           <Link
             to={'/dashboard'}
             onClick={() => handleDashboardTab('cart')}
-            className="cart bg-white h-10 w-10 flex items-center justify-center rounded-full shadow relative"
+            className="cart bg-white h-10 w-10 flex items-center justify-center rounded-full shadow relative hover:bg-primary-color hover:text-white"
           >
-            <CiShoppingCart className="text-black text-2xl" />
+            <CiShoppingCart className="text-2xl" />
             {cart.length > 0 ? (
               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
                 {cart.length}
@@ -54,9 +54,9 @@ const Header = () => {
           <Link
             to={'/dashboard'}
             onClick={() => handleDashboardTab('wishlist')}
-            className="wishlist bg-white h-10 w-10 flex items-center justify-center rounded-full shadow relative"
+            className="wishlist bg-white h-10 w-10 flex items-center justify-center rounded-full shadow relative hover:bg-primary-color hover:text-white"
           >
-            <CiHeart className="text-black text-2xl" />
+            <CiHeart className="text-2xl" />
             {wishlist.length > 0 ? (
               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
                 {wishlist.length}

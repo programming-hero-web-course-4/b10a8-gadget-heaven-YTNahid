@@ -1,6 +1,6 @@
 import { useLoaderData } from 'react-router-dom';
 import Product from './Product/Product';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const Products = () => {
   const [productTab, setProductTab] = useState('All');
@@ -35,7 +35,7 @@ const Products = () => {
             </button>
           </div>
         </div>
-        <div className="column w-4/5 grid grid-cols-3">
+        <div className="column pt-0 w-4/5 grid grid-cols-3">
           {products.map((product) => {
             if (productTab === product.category) return <Product key={product.product_id} product={product}></Product>;
             else if (productTab === 'All') return <Product key={product.product_id} product={product}></Product>;
